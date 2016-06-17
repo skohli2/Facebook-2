@@ -21,6 +21,8 @@
 		429277A6198F392800E19641 /* CreatePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429277A5198F392800E19641 /* CreatePhotoViewController.swift */; };
 		429277A8198F393500E19641 /* CreateCheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429277A7198F393500E19641 /* CreateCheckinViewController.swift */; };
 		4F0AEDD01D119CB700E03CDE /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0AEDCF1D119CB700E03CDE /* PhotoViewController.swift */; };
+		4F0AEE0F1D137FA100E03CDE /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0AEE0D1D137FA100E03CDE /* BaseTransition.swift */; };
+		4F0AEE101D137FA100E03CDE /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0AEE0E1D137FA100E03CDE /* FadeTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		429277A5198F392800E19641 /* CreatePhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePhotoViewController.swift; sourceTree = "<group>"; };
 		429277A7198F393500E19641 /* CreateCheckinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCheckinViewController.swift; sourceTree = "<group>"; };
 		4F0AEDCF1D119CB700E03CDE /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		4F0AEE0D1D137FA100E03CDE /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
+		4F0AEE0E1D137FA100E03CDE /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,8 @@
 				4292779F198F068E00E19641 /* StoryViewController.swift */,
 				429277A3198F391500E19641 /* CreateStatusViewController.swift */,
 				429277A5198F392800E19641 /* CreatePhotoViewController.swift */,
+				4F0AEE0D1D137FA100E03CDE /* BaseTransition.swift */,
+				4F0AEE0E1D137FA100E03CDE /* FadeTransition.swift */,
 				429277A7198F393500E19641 /* CreateCheckinViewController.swift */,
 			);
 			name = "View Controllers";
@@ -246,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				429277A0198F068E00E19641 /* StoryViewController.swift in Sources */,
+				4F0AEE0F1D137FA100E03CDE /* BaseTransition.swift in Sources */,
 				429277A2198F35B600E19641 /* MessagesViewController.swift in Sources */,
 				42167676198ECA7C008CCBC3 /* NotificationsViewController.swift in Sources */,
 				42167656198E3220008CCBC3 /* AppDelegate.swift in Sources */,
@@ -255,6 +262,7 @@
 				42167678198ECE0E008CCBC3 /* RequestsViewController.swift in Sources */,
 				42167673198EAABC008CCBC3 /* SettingsViewController.swift in Sources */,
 				4216767A198ECE88008CCBC3 /* NewsFeedViewController.swift in Sources */,
+				4F0AEE101D137FA100E03CDE /* FadeTransition.swift in Sources */,
 				4F0AEDD01D119CB700E03CDE /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -193,17 +193,45 @@
                                             <segue destination="4dZ-Wz-S84" kind="push" id="wkZ-i9-nuQ"/>
                                         </connections>
                                     </button>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="wedding1" id="xpt-mq-4UK">
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="wedding2" id="IDX-ih-CsA">
+                                        <rect key="frame" x="8" y="243" width="150" height="154"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="DzF-P2-0Qc" appends="YES" id="zRw-Q9-H57"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="wedding3" id="NxA-jg-TCB">
+                                        <rect key="frame" x="160" y="85" width="152" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="nPe-Qh-IwN" appends="YES" id="XVJ-ia-IUE"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="wedding1" id="xpt-mq-4UK">
                                         <rect key="frame" x="8" y="85" width="150" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <gestureRecognizers/>
                                         <connections>
-                                            <outletCollection property="gestureRecognizers" destination="Iem-sp-00z" appends="YES" id="UPs-Y6-FgD"/>
+                                            <outletCollection property="gestureRecognizers" destination="b2H-pl-xTo" appends="YES" id="5pH-3F-GCL"/>
                                         </connections>
                                     </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="wedding2" id="IDX-ih-CsA">
-                                        <rect key="frame" x="8" y="243" width="150" height="154"/>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="wedding4" id="4jy-tI-Xuc">
+                                        <rect key="frame" x="160" y="187" width="160" height="101"/>
                                         <autoresizingMask key="autoresizingMask"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="fIf-Tx-9OO" appends="YES" id="N2U-fB-Ied"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="wedding5" id="Xc4-Qe-HKz">
+                                        <rect key="frame" x="160" y="291" width="160" height="101"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="wT4-cQ-upR" appends="YES" id="UWq-PF-9YY"/>
+                                        </connections>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.82745098039215681" green="0.83921568627450982" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
@@ -250,9 +278,29 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Rx-vT-Xm2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="Iem-sp-00z">
+                <tapGestureRecognizer id="b2H-pl-xTo">
                     <connections>
-                        <action selector="onPhotoTap:" destination="hBK-bb-7vk" id="Rh1-HH-qA1"/>
+                        <action selector="onPhotoTap:" destination="hBK-bb-7vk" id="fCH-eg-FZA"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="DzF-P2-0Qc">
+                    <connections>
+                        <action selector="onPhotoTap:" destination="hBK-bb-7vk" id="ybm-iK-Zns"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="nPe-Qh-IwN">
+                    <connections>
+                        <action selector="onPhotoTap:" destination="hBK-bb-7vk" id="X93-xF-jT0"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="fIf-Tx-9OO">
+                    <connections>
+                        <action selector="onPhotoTap:" destination="hBK-bb-7vk" id="wVR-aj-e5W"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="wT4-cQ-upR">
+                    <connections>
+                        <action selector="onPhotoTap:" destination="hBK-bb-7vk" id="pOv-Q7-gyc"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -656,5 +704,8 @@
         <image name="thrillist_detail" width="320" height="1203"/>
         <image name="wedding1" width="320" height="480"/>
         <image name="wedding2" width="480" height="320"/>
+        <image name="wedding3" width="480" height="320"/>
+        <image name="wedding4" width="480" height="320"/>
+        <image name="wedding5" width="480" height="320"/>
     </resources>
 </document>
