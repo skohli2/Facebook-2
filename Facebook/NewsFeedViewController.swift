@@ -13,7 +13,8 @@ class NewsFeedViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var feedImageView: UIImageView!
     @IBOutlet weak var imageView: UIImageView!
-    var fadeTransition: FadeTransition!
+    var lightBoxTransition: LightBoxTransition!
+    var selectedImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,8 +41,9 @@ class NewsFeedViewController: UIViewController {
     
     
     @IBAction func onPhotoTap(sender: UITapGestureRecognizer) {
-        performSegueWithIdentifier("PhotoViewSegue", sender: self)
-        print ("Hello")
+        selectedImageView = sender.view as! UIImageView
+        performSegueWithIdentifier("PhotoViewSegue", sender: selectedImageView)
+        
         
             }
     
@@ -55,18 +57,19 @@ class NewsFeedViewController: UIViewController {
         var destinationViewController = segue.destinationViewController as! PhotoViewController
         //photoViewController.view.layoutIfNeeded()
         
-        destinationViewController.image = self.imageView.image
+        destinationViewController.photoImage = self.selectedImageView.image
+        
         // Set the modal presentation style of your destinationViewController to be custom.
         destinationViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
         
         // Create a new instance of your fadeTransition.
-        fadeTransition = FadeTransition()
+        lightBoxTransition = LightBoxTransition()
         
         // Tell the destinationViewController's  transitioning delegate to look in fadeTransition for transition instructions.
-        destinationViewController.transitioningDelegate = fadeTransition
+        destinationViewController.transitioningDelegate = lightBoxTransition
         
         // Adjust the transition duration. (seconds)
-        fadeTransition.duration = 5.0
+        lightBoxTransition.duration = 0.4
         
         
      }

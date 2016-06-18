@@ -9,13 +9,16 @@
 import UIKit
 
 class PhotoViewController: UIViewController {
-    var image: UIImage!
     
+    var photoImage: UIImage!
+    var originalCenter: CGPoint!
+    
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.image = image
+        imageView.image = photoImage
 
         // Do any additional setup after loading the view.
     }
@@ -30,4 +33,29 @@ class PhotoViewController: UIViewController {
         dismissViewControllerAnimated(true, completion: nil)
     }
 
+    @IBAction func onPhotoPan(sender: UIPanGestureRecognizer) {
+        var point = sender.locationInView(view)
+        var velocity = sender.velocityInView(view)
+        var translation = sender.translationInView(view)
+        
+        if sender.state == UIGestureRecognizerState.Began {
+            originalCenter = scrollView.center
+            print("Gesture began")
+        } else if sender.state == UIGestureRecognizerState.Changed {
+            scrollView.center = CGPoint(x: originalCenter.x, y: originalCenter.y + translation.y)
+            if translation.y > 100 {
+                dismissViewControllerAnimated(true, completion: nil)
+            }
+
+            print("Gesture is changing")
+        } else if sender.state == UIGestureRecognizerState.Ended {
+            if translation.y > 50 {
+             dismissViewControllerAnimated(true, completion: nil)
+            } else {
+            scrollView.center = originalCenter
+
+            }
+            print("Gesture ended")
+        }
+    }
 }

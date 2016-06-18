@@ -131,9 +131,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="df1-sQ-s32">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="df1-sQ-s32">
                                         <rect key="frame" x="0.0" y="37" width="320" height="531"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <gestureRecognizers/>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="doneButton" id="Xmd-xd-dSV">
                                         <rect key="frame" x="259" y="5" width="51" height="27"/>
@@ -147,15 +148,25 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="2IH-4u-ouW" appends="YES" id="y8K-6d-VYu"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="df1-sQ-s32" id="BeK-yK-eom"/>
+                        <outlet property="scrollView" destination="0wZ-ou-u75" id="Uwk-bg-HOi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nWy-Dj-iWb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="2IH-4u-ouW">
+                    <connections>
+                        <action selector="onPhotoPan:" destination="JNI-Tj-71C" id="tmQ-Nf-ocQ"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1334" y="1442"/>
         </scene>

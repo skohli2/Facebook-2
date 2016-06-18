@@ -23,6 +23,7 @@
 		4F0AEDD01D119CB700E03CDE /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0AEDCF1D119CB700E03CDE /* PhotoViewController.swift */; };
 		4F0AEE0F1D137FA100E03CDE /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0AEE0D1D137FA100E03CDE /* BaseTransition.swift */; };
 		4F0AEE101D137FA100E03CDE /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0AEE0E1D137FA100E03CDE /* FadeTransition.swift */; };
+		4F313E781D14C2F7004AA940 /* LightBoxTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F313E771D14C2F7004AA940 /* LightBoxTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		4F0AEDCF1D119CB700E03CDE /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		4F0AEE0D1D137FA100E03CDE /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
 		4F0AEE0E1D137FA100E03CDE /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
+		4F313E771D14C2F7004AA940 /* LightBoxTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightBoxTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 				429277A5198F392800E19641 /* CreatePhotoViewController.swift */,
 				4F0AEE0D1D137FA100E03CDE /* BaseTransition.swift */,
 				4F0AEE0E1D137FA100E03CDE /* FadeTransition.swift */,
+				4F313E771D14C2F7004AA940 /* LightBoxTransition.swift */,
 				429277A7198F393500E19641 /* CreateCheckinViewController.swift */,
 			);
 			name = "View Controllers";
@@ -264,6 +267,7 @@
 				4216767A198ECE88008CCBC3 /* NewsFeedViewController.swift in Sources */,
 				4F0AEE101D137FA100E03CDE /* FadeTransition.swift in Sources */,
 				4F0AEDD01D119CB700E03CDE /* PhotoViewController.swift in Sources */,
+				4F313E781D14C2F7004AA940 /* LightBoxTransition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
