@@ -23,7 +23,7 @@ class PhotoViewController: UIViewController {
         super.viewDidLoad()
 //        scrollView.delegate = self 
         imageView.image = photoImage
-        parentView.backgroundColor = UIColor(white: 0, alpha: 0.3)
+       parentView.backgroundColor = UIColor(white: 0, alpha: 0.3)
 
         // Do any additional setup after loading the view.
     }
@@ -61,12 +61,13 @@ class PhotoViewController: UIViewController {
 
             print("Gesture is changing")
         } else if sender.state == UIGestureRecognizerState.Ended {
-            if translation.y > 50 {
-             dismissViewControllerAnimated(true, completion: nil)
-            } else {
+         //   if translation.y > 100 {
+           //  dismissViewControllerAnimated(true, completion: nil)
+         //   } else {
             scrollView.center = originalCenter
-
-            }
+            doneButton.alpha = 1
+            photoActionsButton.alpha = 1
+           // }
             print("Gesture ended")
         }
     }

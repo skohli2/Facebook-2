@@ -31,24 +31,24 @@ class LightBoxTransition: BaseTransition {
         photoViewController.imageView.alpha = 0
 
         
-        blackView.backgroundColor = UIColor(white: 0, alpha: 0.9)
-        blackView.frame.size = containerView.frame.size
-        blackView.alpha = 0
-        containerView.insertSubview(blackView, belowSubview: toViewController.view)
-        
+//        blackView.backgroundColor = UIColor(white: 0, alpha: 0.9)
+//        blackView.frame.size = containerView.frame.size
+//        blackView.alpha = 0
+//        containerView.insertSubview(blackView, belowSubview: toViewController.view)
+//        
         
         toViewController.view.alpha = 0
         toViewController.view.transform = CGAffineTransformMakeScale(0, 0)
         UIView.animateWithDuration(duration, animations: {
             movingImageView.frame = photoViewController.imageView.frame
             toViewController.view.alpha = 1
-            toViewController.view.transform = CGAffineTransformMakeScale(1, 0.9)
-            self.blackView.alpha = 0
+            toViewController.view.transform = CGAffineTransformMakeScale(1, 1)
+           // self.blackView.alpha = 0
         }) { (finished: Bool) -> Void in
             photoViewController.imageView.alpha = 1
             newsFeedController.selectedImageView.alpha = 1
             movingImageView.alpha = 0
-            self.blackView.alpha = 1
+           // self.blackView.alpha = 1
             self.finish()
         }
     }
@@ -56,14 +56,14 @@ class LightBoxTransition: BaseTransition {
     override func dismissTransition(containerView: UIView, fromViewController: UIViewController, toViewController: UIViewController) {
         
         fromViewController.view.alpha = 1
-        fromViewController.view.transform = CGAffineTransformMakeScale(1, 0.9)
+        fromViewController.view.transform = CGAffineTransformMakeScale(1, 1)
         UIView.animateWithDuration(duration, animations: {
-           self.blackView.backgroundColor = UIColor(white: 1, alpha: 0)
-           self.blackView.alpha = 1
+//           self.blackView.backgroundColor = UIColor(white: 1, alpha: 0)
+//           self.blackView.alpha = 1
             fromViewController.view.alpha = 0
         fromViewController.view.transform = CGAffineTransformMakeScale(0.001, 0.001)
         }) { (finished: Bool) -> Void in
-            self.blackView.alpha = 1
+            //self.blackView.alpha = 1
 
             self.finish()
         }
