@@ -127,13 +127,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="0wZ-ou-u75">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" id="0wZ-ou-u75">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="df1-sQ-s32">
-                                        <rect key="frame" x="0.0" y="37" width="320" height="531"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="df1-sQ-s32">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <gestureRecognizers/>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="doneButton" id="Xmd-xd-dSV">
@@ -161,8 +162,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="doneButton" destination="Xmd-xd-dSV" id="osW-7z-xqx"/>
                         <outlet property="imageView" destination="df1-sQ-s32" id="BeK-yK-eom"/>
-                        <outlet property="scrollView" destination="0wZ-ou-u75" id="Uwk-bg-HOi"/>
+                        <outlet property="parentView" destination="0OR-A2-Uuz" id="pO8-7G-2eR"/>
+                        <outlet property="photoActionsButton" destination="bv7-O2-lvf" id="Urj-YY-aZU"/>
+                        <outlet property="scrollView" destination="0wZ-ou-u75" id="ZZF-FL-jL0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nWy-Dj-iWb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -224,14 +228,6 @@
                                             <outletCollection property="gestureRecognizers" destination="nPe-Qh-IwN" appends="YES" id="XVJ-ia-IUE"/>
                                         </connections>
                                     </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="wedding1" id="xpt-mq-4UK">
-                                        <rect key="frame" x="8" y="85" width="150" height="150"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <gestureRecognizers/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="b2H-pl-xTo" appends="YES" id="5pH-3F-GCL"/>
-                                        </connections>
-                                    </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="wedding4" id="4jy-tI-Xuc">
                                         <rect key="frame" x="160" y="187" width="160" height="101"/>
                                         <autoresizingMask key="autoresizingMask"/>
@@ -246,6 +242,14 @@
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="wT4-cQ-upR" appends="YES" id="UWq-PF-9YY"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="wedding1" id="xpt-mq-4UK">
+                                        <rect key="frame" x="8" y="85" width="152" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="b2H-pl-xTo" appends="YES" id="5pH-3F-GCL"/>
                                         </connections>
                                     </imageView>
                                 </subviews>
@@ -319,7 +323,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-942" y="1436"/>
+            <point key="canvasLocation" x="-832" y="1478"/>
         </scene>
         <!--Story View Controller-->
         <scene sceneID="nsQ-Dd-gpo">

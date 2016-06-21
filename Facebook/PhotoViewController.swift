@@ -13,12 +13,17 @@ class PhotoViewController: UIViewController {
     var photoImage: UIImage!
     var originalCenter: CGPoint!
     
+    @IBOutlet var parentView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var doneButton: UIImageView!
+    @IBOutlet weak var photoActionsButton: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        scrollView.delegate = self 
         imageView.image = photoImage
+        parentView.backgroundColor = UIColor(white: 0, alpha: 0.3)
 
         // Do any additional setup after loading the view.
     }
@@ -41,10 +46,17 @@ class PhotoViewController: UIViewController {
         if sender.state == UIGestureRecognizerState.Began {
             originalCenter = scrollView.center
             print("Gesture began")
+            
         } else if sender.state == UIGestureRecognizerState.Changed {
             scrollView.center = CGPoint(x: originalCenter.x, y: originalCenter.y + translation.y)
+        scrollView.backgroundColor = UIColor(white: 0, alpha: 0.4)
+           // LightBoxTransition
+        doneButton.alpha = 0.2
+            photoActionsButton.alpha = 0.2
+           
             if translation.y > 100 {
                 dismissViewControllerAnimated(true, completion: nil)
+                
             }
 
             print("Gesture is changing")

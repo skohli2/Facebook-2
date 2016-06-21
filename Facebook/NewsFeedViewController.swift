@@ -13,6 +13,8 @@ class NewsFeedViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var feedImageView: UIImageView!
     @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet var parentView: UIView!
     var lightBoxTransition: LightBoxTransition!
     var selectedImageView: UIImageView!
     
@@ -21,6 +23,7 @@ class NewsFeedViewController: UIViewController {
 
         // Configure the content size of the scroll view
         scrollView.contentSize = CGSizeMake(320, feedImageView.image!.size.height)
+        //parentView.backgroundColor = UIColor(white: 0, alpha: 0)
     }
 
     override func didReceiveMemoryWarning() {
